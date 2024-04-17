@@ -1,6 +1,6 @@
 package abstract_factory.product;
 
-public class WoodChair implements Chair{
+public class WoodChair extends Chair{
 
     @Override
     public void selfIntroduce() {

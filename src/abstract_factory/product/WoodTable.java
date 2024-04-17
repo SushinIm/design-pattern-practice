@@ -1,6 +1,6 @@
 package abstract_factory.product;
 
-public class WoodTable implements Table {
+public class WoodTable extends Table {
 
     @Override
     public void selfIntroduce() {

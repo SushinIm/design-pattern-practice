@@ -18,8 +18,8 @@ public class FactoryConfiguration {
 
     public FurnitureFactory configureFactory(Material material) {
         return switch(material) {
-            case WOOD -> new WoodFactory();
-            case PLASTIC -> new PlasticFactory();
+            case WOOD -> WoodFactory.getInstance();
+            case PLASTIC -> PlasticFactory.getInstance();
         };
     }
 }

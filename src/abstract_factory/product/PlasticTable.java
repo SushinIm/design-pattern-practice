@@ -1,6 +1,6 @@
 package abstract_factory.product;
 
-public class PlasticTable implements Table {
+public class PlasticTable extends Table {
 
     @Override
     public void selfIntroduce() {

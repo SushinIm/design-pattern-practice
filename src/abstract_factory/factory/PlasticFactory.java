@@ -6,6 +6,15 @@ import abstract_factory.product.PlasticTable;
 import abstract_factory.product.Table;
 
 public class PlasticFactory implements FurnitureFactory {
+    private PlasticFactory() {}
+
+    private static class PlasticFactoryInstanceHolder {
+        private static final PlasticFactory INSTANCE = new PlasticFactory();
+    }
+
+    public static PlasticFactory getInstance() {
+        return PlasticFactory.PlasticFactoryInstanceHolder.INSTANCE;
+    }
 
     @Override
     public Chair createChair() {

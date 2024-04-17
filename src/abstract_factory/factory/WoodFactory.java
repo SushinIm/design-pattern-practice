@@ -6,6 +6,15 @@ import abstract_factory.product.WoodChair;
 import abstract_factory.product.WoodTable;
 
 public class WoodFactory implements FurnitureFactory {
+    private WoodFactory() {}
+
+    private static class WoodFactoryInstanceHolder {
+        private static final WoodFactory INSTANCE = new WoodFactory();
+    }
+
+    public static WoodFactory getInstance() {
+        return WoodFactory.WoodFactoryInstanceHolder.INSTANCE;
+    }
 
     @Override
     public Chair createChair() {
