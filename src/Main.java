@@ -3,6 +3,8 @@ import abstract_factory.factory.FurnitureFactory;
 import abstract_factory.product.Chair;
 import abstract_factory.product.Table;
 import constant.Material;
+import factory_method.factory.BenchFactory;
+import factory_method.factory.ReclinerFactory;
 
 public class Main {
 
@@ -19,7 +21,8 @@ public class Main {
                 table.selfIntroduce();
             }
             case "2" -> {
-
+                factory_method.product.Chair bench = BenchFactory.getInstance().manufactureChair();
+                factory_method.product.Chair recliner = ReclinerFactory.getInstance().manufactureChair();
             }
         }
     }
